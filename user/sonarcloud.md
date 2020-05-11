@@ -9,24 +9,6 @@ redirect_from:
 
 Please refer to the [SonarQube documentation](http://redirect.sonarsource.com/doc/analyzing-source-code.html) for more details on how to configure different scanners.
 
-## Requirements
-
-You are using one of the two following environments:
-
-* [CI Environment with JVM VM image](/user/reference/precise/) - for instance:
-
-```yaml
-language: java
-```
-{: data-file=".travis.yml"}
-
-* [Trusty CI Environment](/user/reference/trusty/):
-
-```yaml
-dist: trusty
-```
-{: data-file=".travis.yml"}
-
 ## Inspecting code with the SonarQube Scanner
 
 Before inspecting your code, you need to:
