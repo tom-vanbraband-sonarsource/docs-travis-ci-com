@@ -36,21 +36,22 @@ you can have jobs depend on each other with [Build Stages](/user/build-stages/),
 set up [notifications](/user/notifications/), prepare
 [deployments](/user/deployment/) after builds and many other tasks.
 
-## Builds, Stages, Jobs and Phases
+## Builds, Jobs, Stages and Phases
 
 In the Travis CI documentation, some common words have specific meanings:
 
-* *build* - a group of *jobs* that run in sequence. For example, a build might have two *jobs*, each
-  of which tests a project with a different version of a programming language.
-  A *build* finishes when all of its jobs are finished.
-* *stage* - a group of *jobs* that run in parallel as part of a sequential *build* process composed of multiple [stages](/user/build-stages/).
+* *phase* - the [sequential steps](/user/job-lifecycle/)
+  of a job. For example, the `install` phase, comes before the `script` phase,
+  which comes before the optional `deploy` phase.
 * *job* - an automated process that clones your repository into a virtual
   environment and then carries out a series of *phases* such as compiling your
   code, running tests, etc. A job fails, if the return code of the `script` *phase*
   is non-zero.
-* *phase* - the [sequential steps](/user/job-lifecycle/)
-  of a *job*. For example, the `install` phase, comes before the `script` phase,
-  which comes before the optional `deploy` phase.
+* *build* - a group of *jobs*. For example, a build might have two *jobs*, each
+  of which tests a project with a different version of a programming language.
+  A *build* finishes when all of its jobs are finished.
+* *stage* - a group of *jobs* that run in parallel as part of a sequential build
+  process composed of multiple [stages](/user/build-stages/).
 
 ## Breaking the Build
 
